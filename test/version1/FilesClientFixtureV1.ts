@@ -64,6 +64,19 @@ export class FilesClientFixtureV1 {
                     }
                 );
             },
+        // Get groups
+            (callback) => {
+                this._client.getGroups(
+                    null, null, 
+                    (err, page) => {
+                        assert.isNull(err);
+
+                        assert.lengthOf(page.data, 1);
+
+                        callback();
+                    }
+                );
+            },
         // Delete file
             (callback) => {
                 this._client.deleteFileById(

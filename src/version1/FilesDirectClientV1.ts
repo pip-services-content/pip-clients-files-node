@@ -20,6 +20,11 @@ export class FilesDirectClientV1 extends DirectClient<any> implements IFilesClie
             this.configure(ConfigParams.fromValue(config));
     }
         
+    public getGroups(correlationId: string, paging: PagingParams,
+        callback: (err: any, page: DataPage<string>) => void): void {
+        this._controller.getGroups(correlationId, paging, callback);
+    }
+
     public getFilesByFilter(correlationId: string, filter: FilterParams, paging: PagingParams,
         callback: (err: any, page: DataPage<FileV1>) => void): void {
         this._controller.getFilesByFilter(correlationId, filter, paging, callback);

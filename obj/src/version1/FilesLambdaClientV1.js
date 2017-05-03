@@ -8,6 +8,11 @@ class FilesLambdaClientV1 extends pip_services_aws_node_1.CommandableLambdaClien
         if (config != null)
             this.configure(pip_services_commons_node_1.ConfigParams.fromValue(config));
     }
+    getGroups(correlationId, paging, callback) {
+        this.callCommand('get_groups', correlationId, {
+            paging: paging
+        }, callback);
+    }
     getFilesByFilter(correlationId, filter, paging, callback) {
         this.callCommand('get_files_by_filter', correlationId, {
             filter: filter,

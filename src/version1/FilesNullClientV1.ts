@@ -7,6 +7,11 @@ import { IFilesClientV1 } from './IFilesClientV1';
 export class FilesNullClientV1 implements IFilesClientV1 {
     constructor(config?: any) {}
         
+    public getGroups(correlationId: string, paging: PagingParams,
+        callback: (err: any, page: DataPage<string>) => void): void {
+        callback(null, new DataPage<string>([], 0));
+    }
+
     public getFilesByFilter(correlationId: string, filter: FilterParams, paging: PagingParams,
         callback: (err: any, page: DataPage<FileV1>) => void): void {
         callback(null, new DataPage<FileV1>([], 0));

@@ -16,6 +16,18 @@ export class FilesSenecaClientV1 extends CommandableSenecaClient implements IFil
         if (config != null)
             this.configure(ConfigParams.fromValue(config));
     }
+
+    public getGroups(correlationId: string, paging: PagingParams,
+        callback: (err: any, page: DataPage<string>) => void): void {
+        this.callCommand(
+            'get_groups',
+            correlationId,
+            {
+                paging: paging
+            }, 
+            callback
+        );
+    }
         
     public getFilesByFilter(correlationId: string, filter: FilterParams, paging: PagingParams,
         callback: (err: any, page: DataPage<FileV1>) => void): void {

@@ -10,6 +10,9 @@ class FilesDirectClientV1 extends pip_services_net_node_1.DirectClient {
         if (config != null)
             this.configure(pip_services_commons_node_1.ConfigParams.fromValue(config));
     }
+    getGroups(correlationId, paging, callback) {
+        this._controller.getGroups(correlationId, paging, callback);
+    }
     getFilesByFilter(correlationId, filter, paging, callback) {
         this._controller.getFilesByFilter(correlationId, filter, paging, callback);
     }
