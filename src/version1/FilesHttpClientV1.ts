@@ -3,7 +3,7 @@ import { IReferences } from 'pip-services-commons-node';
 import { FilterParams } from 'pip-services-commons-node';
 import { PagingParams } from 'pip-services-commons-node';
 import { DataPage } from 'pip-services-commons-node';
-import { CommandableHttpClient } from 'pip-services-net-node';
+import { CommandableHttpClient } from 'pip-services-rpc-node';
 
 import { FileV1 } from './FileV1';
 import { IFilesClientV1 } from './IFilesClientV1';
@@ -11,7 +11,7 @@ import { IFilesClientV1 } from './IFilesClientV1';
 export class FilesHttpClientV1 extends CommandableHttpClient implements IFilesClientV1 {
 
     constructor(config?: any) {
-        super('files');
+        super('v1/files');
 
         if (config != null)
             this.configure(ConfigParams.fromValue(config));

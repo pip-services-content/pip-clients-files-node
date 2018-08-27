@@ -1,7 +1,7 @@
 import { FilterParams } from 'pip-services-commons-node';
 import { PagingParams } from 'pip-services-commons-node';
 import { DataPage } from 'pip-services-commons-node';
-import { CommandableSenecaClient } from 'pip-services-net-node';
+import { CommandableSenecaClient } from 'pip-services-seneca-node';
 import { FileV1 } from './FileV1';
 import { IFilesClientV1 } from './IFilesClientV1';
 export declare class FilesSenecaClientV1 extends CommandableSenecaClient implements IFilesClientV1 {

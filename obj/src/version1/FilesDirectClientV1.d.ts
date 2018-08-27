@@ -1,7 +1,7 @@
 import { FilterParams } from 'pip-services-commons-node';
 import { PagingParams } from 'pip-services-commons-node';
 import { DataPage } from 'pip-services-commons-node';
-import { DirectClient } from 'pip-services-net-node';
+import { DirectClient } from 'pip-services-rpc-node';
 import { IFilesClientV1 } from './IFilesClientV1';
 import { FileV1 } from './FileV1';
 export declare class FilesDirectClientV1 extends DirectClient<any> implements IFilesClientV1 {
