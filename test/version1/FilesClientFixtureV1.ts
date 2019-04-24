@@ -2,7 +2,7 @@ let _ = require('lodash');
 let async = require('async');
 let assert = require('chai').assert;
 
-import { IdGenerator } from 'pip-services-commons-node';
+import { IdGenerator } from 'pip-services3-commons-node';
 
 import { FileV1 } from '../../src/version1/FileV1';
 import { IFilesClientV1 } from '../../src/version1/IFilesClientV1';

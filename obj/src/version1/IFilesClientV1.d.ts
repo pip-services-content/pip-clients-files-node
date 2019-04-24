@@ -1,6 +1,6 @@
-import { DataPage } from 'pip-services-commons-node';
-import { FilterParams } from 'pip-services-commons-node';
-import { PagingParams } from 'pip-services-commons-node';
+import { DataPage } from 'pip-services3-commons-node';
+import { FilterParams } from 'pip-services3-commons-node';
+import { PagingParams } from 'pip-services3-commons-node';
 import { FileV1 } from './FileV1';
 export interface IFilesClientV1 {
     getGroups(correlationId: string, paging: PagingParams, callback: (err: any, page: DataPage<string>) => void): void;
